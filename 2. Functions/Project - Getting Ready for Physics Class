@@ -1,64 +1,62 @@
-#adding item 1 description
-lovely_loveseat_description = '''
-Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or white.
-'''
-print(lovely_loveseat_description)
+train_mass = 22680
+train_acceleration = 10
+train_distance = 100
 
-#adding item 1 price
-lovely_loveseat_price = 254.00
+bomb_mass = 1
 
-#adding item 2
-stylish_settee_description = '''
-Stylish Settee. Faux leather on birch. 29.50 inches high x 54.75 inches wide x 28 inches deep. Black.
-'''
-print(stylish_settee_description)
+#question 1
+def f_to_c(f_temp):
+  c_temp = (f_temp - 32) * 5/9
+  return c_temp
 
-#adding item 2 price
-stylish_settee_price = 180.50
+#question 2
+f100_in_celsius = f_to_c(100)
+print(f100_in_celsius)
 
-#ading item 3
-luxurious_lamp_description = '''
-Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade.
-'''
-print(luxurious_lamp_description)
+#question 3
+def c_to_f(c_temp):
+  f_temp = c_temp * (9/5) + 32
+  return f_temp
 
-#adding item 3 price
-luxurious_lamp_price = 52.15
+#question 4
+c0_in_fahrenheit = c_to_f(0)
+print(c0_in_fahrenheit)
 
+#question 5
+def get_force(mass, acceleration): 
+  multi = mass * acceleration
+  return multi
 
-#the sales tax is equal to:
-sales_tax = 0.088
+#question 6
+train_force = get_force(train_mass, train_acceleration)
+print(train_force)
 
-#the total amount customer one needs to pay for now
-customer_one_total = 0
+#question 7
+print("The GE train supplies" + " " + str(train_force) + " " + "Newtons of force.")
 
-#what the customer one wants to purchase for now
-customer_one_itemization = ""
+#question 8
+def get_energy(mass, c = 3*10**8):
+  result = mass * (c**2)
+  return result
+  
+#question 9
+bomb_energy = get_energy(bomb_mass)
+print(bomb_energy)
+  
+#question 10
+print("A 1kg bomb supplies" + " " + str(bomb_energy) + " " + "Joules.")
 
+#"Do the Work" part
+#question 11
+def get_work(mass, acceleration, distance):
+  force = mass * acceleration
+  work = force * distance
+  return work
 
-#customer one purchased item 1
-customer_one_total += lovely_loveseat_price
-print(customer_one_total)
+#question 12
+train_work = get_work(train_mass, train_acceleration, train_distance)
+print(train_work)
 
-customer_one_itemization += lovely_loveseat_description
-print('For now, the customer one has purchased:', customer_one_itemization)
-
-#customer one purchased item 2 
-customer_one_total += luxurious_lamp_price
-print(customer_one_total)
-
-customer_one_itemization += luxurious_lamp_description
-print('For now, the customer one has purchased:', customer_one_itemization)
-
-#amount of tax for customer one purchase
-customer_one_tax = customer_one_total * sales_tax
-print('This is the additional amount the customer one needs to pay (tax):', customer_one_tax)
-
-#final total amount of money (after tax) customer one needs to pay
-customer_one_total += customer_one_tax
-print('This is the total amount the customer one must pay (after tax):', customer_one_total)
-
-#list of all items purchased by customer one
-print("Customer One Items:")
-print(customer_one_itemization)
+#question 13
+print("The GE train does" + " " + str(train_work) + " " + "Joules of work over" + " " + str(train_distance) + " " + "meters.")
 
