@@ -4,9 +4,9 @@
 
 # Modules:
 
-## 1.  Syntax
-## 2.  Functions
-## 3.  Control Flow
+1.  Syntax
+2.  Functions
+3.  Control Flow
 4.  Lists
 5.  Loops
 6.  Strings
